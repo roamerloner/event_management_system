@@ -92,12 +92,12 @@ closeDBConnection($conn);
             <form method="POST" action="">
             <div class="mb-3">
                 <label class="form-label" for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" value="<?php echo $user['name'] ?>" readonly>
+                <input type="text" class="form-control" id="name" name="name" value="<?php echo $user['name'] ?>" >
             </div>
 
             <div class="mb-3">
                 <label class="form-label" for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email"  value="<?php echo $user['email'] ?>" readonly>
+                <input type="email" class="form-control" id="email" name="email"  value="<?php echo $user['email'] ?>" >
             </div>
             <button class="btn btn-primary" type="submit">Register</button>
             </form>  
