@@ -51,7 +51,7 @@ closeDBConnection($conn);
             </div>
         </div>
         <div class="mt-3">
-            <a href="register_attendee.php?id=<?php $event['id'];?>" class="btn btn-primary">Register for Event</a>
+            <a href="register_attendee.php?id=<?php echo $event['id'];?>" class="btn btn-primary">Register for Event</a>
             <a href="events.php" class="btn btn-secondary">Back to Events</a>
         </div>
     </div>
