@@ -37,7 +37,18 @@ function isAdmin(){
 }
 
 function redirectTo($location){
-    header("Location: " . SITE_URL . "/" . $location);
+    $base_url = sprintf(
+        "%s://%s%s",
+        isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+        $_SERVER['SERVER_NAME'],
+        dirname($_SERVER['PHP_SELF'])
+    );
+
+    $base_url = rtrim($base_url, '/');
+
+    $location = '/' . ltrim($location, '/');
+
+    header("Location: " . $base_url . $location);
     exit();
 }
 

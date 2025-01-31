@@ -35,6 +35,7 @@ $events = getPaginatedEvents($page, $limit, $sortBy, $sortOrder, $filter);
         <div class="mb-3">
             <?php if(isAdmin()) : ?>
             <a href="admin/create_event.php" class="btn btn-primary">Create Event</a>
+            <a href="admin/dashboard.php" class="btn btn-success">Dashboard</a>
             <?php endif;?>
             <a href="logout.php" class="btn btn-secondary">Logout</a>
         </div>
